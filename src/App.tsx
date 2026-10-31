@@ -5,6 +5,8 @@ import viteLogo from "./assets/vite.svg";
 import "./App.css";
 
 import Home from "./pages/Home";
+import Product from "./pages/Product";
+import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -13,7 +15,13 @@ function App() {
 	return (
 		<>
 			<Navbar setPage={setPage} />
-			<Home />
+			{page === "home" ? (
+				<Home />
+			) : page === "product" ? (
+				<Product />
+			) : page === "contact" ? (
+				<Contact />
+			) : null}
 		</>
 	);
 }

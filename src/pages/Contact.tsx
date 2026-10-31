@@ -3,7 +3,7 @@ const Contact = () => {
 		<>
 			<div className='mb-3'>
 				<label
-					for='exampleFormControlInput1'
+					htmlFor='exampleFormControlInput1'
 					className='form-label'
 				>
 					Email address
@@ -17,7 +17,7 @@ const Contact = () => {
 			</div>
 			<div className='mb-3'>
 				<label
-					for='exampleFormControlTextarea1'
+					htmlFor='exampleFormControlTextarea1'
 					className='form-label'
 				>
 					Example textarea
