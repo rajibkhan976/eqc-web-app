@@ -1,28 +1,37 @@
-import { useState } from "react";
-import heroImg from "./assets/hero.png";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
 import "./App.css";
+import Logo from "./assets/logo.png";
+
+import { useState } from "react";
 
 import Home from "./pages/Home";
-import Product from "./pages/Product";
+import Service from "./pages/Service";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 function App() {
 	const [page, setPage] = useState<string>("home");
 
 	return (
-		<>
-			<Navbar setPage={setPage} />
-			{page === "home" ? (
-				<Home />
-			) : page === "product" ? (
-				<Product />
-			) : page === "contact" ? (
-				<Contact />
-			) : null}
-		</>
+		<div className='container-fluid'>
+			<div className='row'>
+				<img
+					src={Logo}
+					alt='logo'
+					className='mt-2 mb-2'
+					style={{ width: "256px" }}
+				/>
+				<Navbar setPage={setPage} />
+				{page === "home" ? (
+					<Home />
+				) : page === "service" ? (
+					<Service />
+				) : page === "contact" ? (
+					<Contact />
+				) : null}
+			</div>
+			<Footer />
+		</div>
 	);
 }
 

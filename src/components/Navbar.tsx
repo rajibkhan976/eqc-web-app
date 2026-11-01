@@ -4,7 +4,7 @@ type NavbarProps = {
 
 const Navbar = ({ setPage }): NavbarProps => {
 	return (
-		<nav className='navbar navbar-expand-lg bg-body-tertiary'>
+		<nav className='navbar navbar-expand-lg bg-info'>
 			<div className='container-fluid'>
 				<button
 					className='navbar-toggler'
@@ -14,6 +14,7 @@ const Navbar = ({ setPage }): NavbarProps => {
 					aria-controls='navbarTogglerDemo01'
 					aria-expanded='false'
 					aria-label='Toggle navigation'
+					style={{ marginLeft: "auto" }}
 				>
 					<span className='navbar-toggler-icon'></span>
 				</button>
@@ -24,7 +25,7 @@ const Navbar = ({ setPage }): NavbarProps => {
 					<ul className='navbar-nav me-auto mb-2 mb-lg-0'>
 						<li className='nav-item'>
 							<a
-								className='nav-link active'
+								className='nav-link text-white active'
 								aria-current='page'
 								href='#'
 								onClick={() => setPage("home")}
@@ -34,17 +35,17 @@ const Navbar = ({ setPage }): NavbarProps => {
 						</li>
 						<li className='nav-item'>
 							<a
-								className='nav-link'
+								className='nav-link text-white'
 								href='#'
-								onClick={() => setPage("product")}
+								onClick={() => setPage("service")}
 							>
-								Product
+								Services
 							</a>
 						</li>
 						<li className='nav-item'>
 							<a
-								className='nav-link'
-								aria-disabled='true'
+								className='nav-link text-white'
+								href='#'
 								onClick={() => setPage("contact")}
 							>
 								Contact
@@ -62,7 +63,7 @@ const Navbar = ({ setPage }): NavbarProps => {
 							aria-label='Search'
 						/>
 						<button
-							className='btn btn-outline-success'
+							className='btn btn-outline-success text-white'
 							type='submit'
 						>
 							Search
